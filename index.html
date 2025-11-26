@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StormTel Services - Social Media Growth</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --twitter-blue: #1DA1F2;
+            --persian-blue: #152a7a;
+            --white: #ffffff;
+            --orange: #ff7b00;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --safaricom-green: #00a651;
+            --safaricom-light-green: #e6f4ea;
+            --youtube-red: #ff0000;
+            --tiktok-black: #010101;
+            --instagram-purple: #e1306c;
+            --facebook-blue: #1877f2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover:not(.btn-disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--persian-blue);
+        }
+
+        header {
+            background-color: var(--persian-blue);
+            color: var(--white);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            background: linear-gradient(to right, var(--white), transparent);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--orange);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--persian-blue), #2a4bc5);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .services {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--orange);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card.youtube .service-icon {
+            color: var(--youtube-red);
+        }
+
+        .service-card.tiktok .service-icon {
+            color: var(--tiktok-black);
+        }
+
+        .service-card.instagram .service-icon {
+            color: var(--instagram-purple);
+        }
+
+        .service-card.facebook .service-icon {
+            color: var(--facebook-blue);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .about {
+            padding: 80px 0;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--persian-blue);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .payment {
+            padding: 80px 0;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .payment-card {
+            background-color: var(--safaricom-light-green);
+            border-radius: 10px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 2px solid var(--safaricom-green);
+        }
+
+        .payment-card h3 {
+            color: var(--safaricom-green);
+            margin-bottom: 20px;
+        }
+
+        .payment-details {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .payment-details p {
+            margin-bottom: 10px;
+            word-break: keep-all;
+            white-space: nowrap;
+        }
+
+        footer {
+            background-color: var(--persian-blue);
+            color: var(--white);
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--orange);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--orange);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .page {
+            display: none;
+            padding: 40px 0 80px;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .page-header {
+            background-color: var(--persian-blue);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .package-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 5px solid;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .package-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .package-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: var(--persian-blue);
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .package-features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .package-features li i {
+            color: var(--orange);
+            margin-right: 10px;
+        }
+
+        /* Calculator Styles */
+        .calculator {
+            margin: 20px 0;
+            padding: 20px;
+            background: var(--light-gray);
+            border-radius: 10px;
+        }
+
+        .calculator-input {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .calculator-input label {
+            font-weight: 600;
+            min-width: 120px;
+        }
+
+        .calculator-input input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 150px;
+            font-size: 1rem;
+        }
+
+        .calculator-result {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid var(--orange);
+        }
+
+        .calculator-result h4 {
+            margin-bottom: 10px;
+            color: var(--persian-blue);
+        }
+
+        .total-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--persian-blue);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            color: var(--persian-blue);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
+
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: var(--light-gray);
+            border-radius: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .contact-option:hover {
+            background-color: #e9e9e9;
+            transform: translateX(5px);
+        }
+
+        .contact-option i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .whatsapp-option i {
+            color: #25D366;
+        }
+
+        .email-option i {
+            color: #D44638;
+        }
+
+        .payment-card {
+            width: 340px;
+        }
+
+        .payment-options {
+            gap: 50px;
+        }
+
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--persian-blue);
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .calculator-input {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .calculator-input input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 60px 0;
+            }
+
+            .services, .about, .contact, .payment {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Make footer compact on desktop */
+        footer {
+            padding: 20px 0 10px;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .footer-section {
+            margin-bottom: 15px;
+        }
+
+        .footer-section h3 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 6px;
+            font-size: 0.85rem;
+        }
+
+        .footer-section p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .social-links {
+            gap: 10px;
+        }
+
+        .social-links a {
+            width: 35px;
+            height: 35px;
+        }
+
+        .copyright {
+            padding-top: 15px;
+            font-size: 0.8rem;
+        }        
+
+        /* Copy button styles */
+        .copy-btn {
+            background: var(--safaricom-green);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 2px 6px;
+            margin-left: 8px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: #008f45;
+            transform: scale(1.05);
+        }
+
+        .copy-btn.copied {
+            background: var(--orange);
+        }
+
+        .payment-details p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 576px) {
+            /* Ultra compact header */
+            header {
+                padding: 6px 0;
+            }
+            
+            .logo img {
+                height: 22px;
+            }
+            
+            .logo-text {
+                font-size: 0.9rem;
+                margin-left: 6px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                font-size: 0.85rem;
+            }
+            
+            /* Ultra compact hero */
+            .hero {
+                padding: 20px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.1rem;
+                margin-bottom: 6px;
+            }
+            
+            .hero p {
+                font-size: 0.8rem;
+                margin-bottom: 10px;
+            }
+            
+            /* Ultra compact sections */
+            .services, .about, .contact, .payment {
+                padding: 20px 0;
+            }
+            
+            .section-title {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            
+            /* Ultra compact cards */
+            .service-card, .package-card, .contact-card {
+                padding: 10px;
+            }
+            
+            .service-icon {
+                font-size: 1.3rem;
+                margin-bottom: 6px;
+            }
+            
+            .service-card h3, .package-card h3 {
+                font-size: 0.9rem;
+                margin-bottom: 6px;
+            }
+            
+            .package-price {
+                font-size: 1rem;
+                margin: 10px 0;
+            }
+            
+            /* Ultra compact contact */
+            .contact-icon {
+                font-size: 1.3rem;
+                margin-bottom: 6px;
+            }
+            
+            .contact-card h3 {
+                font-size: 0.85rem;
+                margin-bottom: 6px;
+            }
+            
+            .contact-card p {
+                font-size: 0.8rem;
+            }
+            
+            /* Ultra compact payment */
+            .payment-card {
+                padding: 10px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .payment-options {
+                gap: 10px;
+            }
+            
+            /* Ultra compact footer */
+            footer {
+                padding: 12px 0 6px;
+            }
+            
+            .footer-content {
+                margin-bottom: 12px;
+            }
+            
+            .footer-section {
+                margin-bottom: 10px;
+                min-width: 100%;
+            }
+            
+            .footer-section h3 {
+                font-size: 0.85rem;
+                margin-bottom: 6px;
+            }
+            
+            .footer-section ul li {
+                margin-bottom: 3px;
+                font-size: 0.75rem;
+            }
+            
+            .footer-section p {
+                font-size: 0.75rem;
+            }
+            
+            .social-links {
+                gap: 6px;
+            }
+            
+            .social-links a {
+                width: 28px;
+                height: 28px;
+                font-size: 0.75rem;
+            }
+            
+            .copyright {
+                padding-top: 10px;
+                font-size: 0.7rem;
+            }
+            
+            /* Ultra compact buttons */
+            .btn {
+                padding: 5px 10px;
+                font-size: 0.75rem;
+            }
+            
+            /* Ultra compact calculator */
+            .calculator {
+                padding: 8px;
+                margin: 8px 0;
+            }
+            
+            .calculator-input {
+                margin-bottom: 5px;
+            }
+            
+            .calculator-input label {
+                font-size: 0.8rem;
+                min-width: 80px;
+            }
+            
+            .calculator-input input {
+                padding: 4px;
+                font-size: 0.75rem;
+                width: 90px;
+            }
+            
+            .calculator-result {
+                padding: 6px;
+                margin-top: 6px;
+            }
+            
+            .calculator-result h4 {
+                font-size: 0.8rem;
+                margin-bottom: 3px;
+            }
+            
+            .total-price {
+                font-size: 0.9rem;
+            }
+            
+            /* Ultra compact modal */
+            .modal-content {
+                padding: 10px;
+            }
+            
+            .modal-header h2 {
+                font-size: 1rem;
+            }
+            
+            /* Ultra compact features */
+            .package-features li {
+                margin-bottom: 3px;
+                font-size: 0.75rem;
+            }
+            
+            .package-features li i {
+                margin-right: 3px;
+                font-size: 0.7rem;
+            }
+            
+            /* Ultra compact about */
+            .about-content {
+                gap: 12px;
+            }
+            
+            .about-text p {
+                margin-bottom: 6px;
+                font-size: 0.8rem;
+            }
+            
+            /* Reduce all text sizes */
+            body {
+                font-size: 0.85rem;
+            }
+            
+            /* Payment details smaller */
+            .payment-details p {
+                font-size: 0.8rem;
+                margin-bottom: 4px;
+            }
+            
+            .payment-card p {
+                font-size: 0.75rem;
+            }
+            
+            /* Page header smaller */
+            .page-header {
+                padding: 25px 0;
+            }
+            
+            .page-header h1 {
+                font-size: 1.2rem;
+            }
+            
+            .page-header p {
+                font-size: 0.8rem;
+            }
+
+            /* Make footer MICRO compact */
+            footer {
+                padding: 4px 0 2px !important;
+            }
+            
+            .footer-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 5px;
+                margin-bottom: 5px;
+            }
+            
+            .footer-section {
+                margin-bottom: 0;
+                padding: 0 3px;
+            }
+            
+            .footer-section h3 {
+                font-size: 0.65rem;
+                margin-bottom: 2px;
+            }
+            
+            .footer-section ul li {
+                margin-bottom: 1px;
+                font-size: 0.6rem;
+            }
+            
+            .footer-section p {
+                font-size: 0.6rem;
+                line-height: 1.1;
+                margin-bottom: 2px;
+            }
+            
+            .social-links {
+                gap: 3px;
+                margin-top: 3px;
+            }
+            
+            .social-links a {
+                width: 20px;
+                height: 20px;
+                font-size: 0.6rem;
+            }
+            
+            .copyright {
+                padding-top: 4px;
+                font-size: 0.55rem;
+            }
+            
+            /* Reduce the first section size */
+            .footer-section:first-child {
+                grid-column: 1 / -1;
+                text-align: center;
+                padding-bottom: 2px;
+            }
+            
+            .footer-section:first-child p {
+                font-size: 0.6rem;
+                margin-bottom: 2px;
+            }
+            
+            /* Hide some footer content if still too big */
+            .footer-section:nth-child(4) {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo" onclick="goToHome()">
+                <img src="logo.png" alt="StormTel Services Logo">
+                <div class="logo-text">StormTel Services</div>
+            </div>
+            <nav>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="container">
+                <h1>Boost Your Social Media Presence</h1>
+                <p>Get real views, likes, followers, and subscribers for YouTube, TikTok, Instagram, and Facebook at affordable prices.</p>
+                <a href="#" class="btn nav-link" data-page="services">Our Services</a>
+            </div>
+        </div>
+
+        <div class="services">
+            <div class="container">
+                <h2 class="section-title">Services We Offer</h2>
+                <div class="services-grid">
+                    <div class="service-card youtube">
+                        <div class="service-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h3>YouTube</h3>
+                        <p>Increase your YouTube channel's visibility with our growth packages.</p>
+                        <a href="#" class="btn nav-link" data-page="youtube">See Packages</a>
+                    </div>
+                    <div class="service-card tiktok">
+                        <div class="service-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <h3>TikTok</h3>
+                        <p>Boost your TikTok profile with views, likes, and followers.</p>
+                        <a href="#" class="btn nav-link" data-page="tiktok">See Packages</a>
+                    </div>
+                    <div class="service-card instagram">
+                        <div class="service-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>Grow your Instagram presence with our engagement packages.</p>
+                        <a href="#" class="btn nav-link" data-page="instagram">See Packages</a>
+                    </div>
+                    <div class="service-card facebook">
+                        <div class="service-icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <h3>Facebook</h3>
+                        <p>Expand your Facebook reach with our targeted growth solutions.</p>
+                        <a href="#" class="btn nav-link" data-page="facebook">See Packages</a>
+                    </div>
+                    <div class="service-card twitter">
+                        <div class="service-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <h3>Twitter (X)</h3>
+                        <p>Boost your X (Twitter) profile with followers, likes, and retweets.</p>
+                        <a href="#" class="btn nav-link" data-page="twitter">See Packages</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="container">
+                <h2 class="section-title">About StormTel Services</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>StormTel Services is a leading provider of social media growth solutions. We help content creators, businesses, and influencers boost their online presence with authentic engagement.</p>
+                        <p>Our services are designed to deliver real results while maintaining the integrity of your social media accounts. With competitive pricing and excellent customer support, we're committed to helping you achieve your social media goals.</p>
+                    </div>
+                    <div class="about-image">
+                        <h3>Reach Out to Us</h3>
+                        <div class="social-links" style="justify-content: center; margin: 20px 0;">
+                            <a href="tel:+254797739720" class="btn" style="background: var(--persian-blue); margin: 5px;">
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
+                            <a href="https://wa.me/254797739720" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25D366; margin: 5px;">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://t.me/stormtel" target="_blank" rel="noopener noreferrer" class="btn" style="background: #0088cc; margin: 5px;">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="mailto:stormtelservices@gmail.com" target="_blank" rel="noopener noreferrer" class="btn" style="background: #D44638; margin: 5px;">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--dark-gray);">We're here to help you grow!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>+254 797 739720</p>
+                        <a href="tel:+254797739720" class="btn">Call Now</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>+254 797 739720</p>
+                        <a href="https://wa.me/254797739720" class="btn" target="_blank">Message Us</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp Channel</h3>
+                        <p>Stay updated with our latest offers</p>
+                        <a href="https://whatsapp.com/channel/0029VaIKZW2HltYETCpfme2G" class="btn" target="_blank">Join Channel</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <h3>Telegram Channel</h3>
+                        <p>Follow us on Telegram</p>
+                        <a href="https://t.me/stormtel" class="btn" target="_blank">Join Channel</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>stormtelservices@gmail.com</p>
+                        <a href="mailto:stormtelservices@gmail.com" class="btn">Send Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment">
+            <div class="container">
+                <h2 class="section-title">Payment Options</h2>
+                <div class="payment-options">
+                    <div class="payment-card">
+                        <h3>Paybill</h3>
+                        <div class="payment-details">
+                            <p>
+                                <strong>Business No:</strong> 522522
+                                <button class="copy-btn" data-text="522522">Copy</button>
+                            </p>
+                            <p>
+                                <strong>Account No:</strong> 1200082370
+                                <button class="copy-btn" data-text="1200082370">Copy</button>
+                            </p>
+                        </div>
+                        <p>Use this option for secure payments via M-Pesa</p>
+                    </div>
+                    <div class="payment-card">
+                        <h3>Send Money</h3>
+                        <div class="payment-details">
+                            <p>
+                                <strong>Phone Number:</strong> +254797739720
+                                <button class="copy-btn" data-text="+254797739720">Copy</button>
+                            </p>
+                        </div>
+                        <p>Send money directly to our<br>M-Pesa number</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Page -->
+    <section id="services" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>Choose from our range of social media growth services</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card youtube">
+                    <div class="service-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube</h3>
+                    <p>Increase your YouTube channel's visibility with our growth packages.</p>
+                    <a href="#" class="btn nav-link" data-page="youtube">See Packages</a>
+                </div>
+                <div class="service-card tiktok">
+                    <div class="service-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok</h3>
+                    <p>Boost your TikTok profile with views, likes, and followers.</p>
+                    <a href="#" class="btn nav-link" data-page="tiktok">See Packages</a>
+                </div>
+                <div class="service-card instagram">
+                    <div class="service-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>Grow your Instagram presence with our engagement packages.</p>
+                    <a href="#" class="btn nav-link" data-page="instagram">See Packages</a>
+                </div>
+                <div class="service-card facebook">
+                    <div class="service-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Expand your Facebook reach with our targeted growth solutions.</p>
+                    <a href="#" class="btn nav-link" data-page="facebook">See Packages</a>
+                </div>
+                <div class="service-card twitter">
+                    <div class="service-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <h3>Twitter (X)</h3>
+                    <p>Boost your X (Twitter) profile with followers, likes, and retweets.</p>
+                    <a href="#" class="btn nav-link" data-page="twitter">See Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Learn more about StormTel Services</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>StormTel Services was founded with the mission to help content creators, businesses, and influencers grow their online presence authentically and effectively.</p>
+                    <p>We understand the challenges of building an audience on social media platforms, which is why we've developed services that deliver real engagement from real users.</p>
+                    <p>Our team is dedicated to providing excellent customer service and ensuring that our clients achieve their social media goals. We're constantly updating our strategies to adapt to platform changes and provide the best possible results.</p>
+                </div>
+                <div class="about-image">
+                    <h3>Reach Out to Us</h3>
+                    <div class="social-links" style="justify-content: center; margin: 20px 0;">
+                        <a href="tel:+254797739720" class="btn" style="background: var(--persian-blue); margin: 5px;">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                        <a href="https://wa.me/254797739720" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25D366; margin: 5px;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/stormtel" target="_blank" rel="noopener noreferrer" class="btn" style="background: #0088cc; margin: 5px;">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="mailto:stormtelservices@gmail.com" target="_blank" rel="noopener noreferrer" class="btn" style="background: #D44638; margin: 5px;">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--dark-gray);">We're here to help you grow!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Packages Page -->
+    <section id="youtube" class="page">
+        <div class="page-header" style="background-color: var(--youtube-red);">
+            <div class="container">
+                <h1>YouTube Packages</h1>
+                <p>Boost your YouTube channel with our engagement packages</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="packages-grid">
+                <div class="package-card" style="border-top-color: var(--youtube-red);">
+                    <h3>Views</h3>
+                    <div class="package-price">KES 250 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Views:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.25" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> High-quality views</li>
+                        <li><i class="fas fa-check"></i> Real engagement</li>
+                        <li><i class="fas fa-check"></i> Fast delivery</li>
+                        <li><i class="fas fa-check"></i> Retention guaranteed</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="YouTube Views" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--youtube-red);">
+                    <h3>Likes</h3>
+                    <div class="package-price">KES 300 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Likes:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.3" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Real user likes</li>
+                        <li><i class="fas fa-check"></i> Organic growth</li>
+                        <li><i class="fas fa-check"></i> Safe for your channel</li>
+                        <li><i class="fas fa-check"></i> Instant start</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="YouTube Likes" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--youtube-red);">
+                    <h3>Subscribers</h3>
+                    <div class="package-price">KES 450 per 100</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Subs:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="4.5" placeholder="e.g., 100">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Active subscribers</li>
+                        <li><i class="fas fa-check"></i> Real accounts</li>
+                        <li><i class="fas fa-check"></i> Gradual delivery</li>
+                        <li><i class="fas fa-check"></i> No password required</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="YouTube Subscribers" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--youtube-red);">
+                    <h3>Watch Hours</h3>
+                    <div class="package-price">KES 3000 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Watch Hours:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="3" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Real watch time</li>
+                        <li><i class="fas fa-check"></i> Meets YouTube requirements</li>
+                        <li><i class="fas fa-check"></i> Gradual accumulation</li>
+                        <li><i class="fas fa-check"></i> Monetization ready</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="YouTube Watch Hours" disabled>Enter Quantity to Purchase</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TikTok Packages Page -->
+    <section id="tiktok" class="page">
+        <div class="page-header" style="background-color: var(--tiktok-black);">
+            <div class="container">
+                <h1>TikTok Packages</h1>
+                <p>Boost your TikTok profile with our engagement packages</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="packages-grid">
+                <div class="package-card" style="border-top-color: var(--tiktok-black);">
+                    <h3>Views</h3>
+                    <div class="package-price">KES 150 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Views:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.15" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> High-quality views</li>
+                        <li><i class="fas fa-check"></i> Real engagement</li>
+                        <li><i class="fas fa-check"></i> Fast delivery</li>
+                        <li><i class="fas fa-check"></i> Organic growth</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="TikTok Views" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--tiktok-black);">
+                    <h3>Likes</h3>
+                    <div class="package-price">KES 200 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Likes:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.2" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Real user likes</li>
+                        <li><i class="fas fa-check"></i> Organic growth</li>
+                        <li><i class="fas fa-check"></i> Safe for your account</li>
+                        <li><i class="fas fa-check"></i> Instant start</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="TikTok Likes" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--tiktok-black);">
+                    <h3>Followers</h3>
+                    <div class="package-price">KES 650 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Followers:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.65" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Active followers</li>
+                        <li><i class="fas fa-check"></i> Real accounts</li>
+                        <li><i class="fas fa-check"></i> Gradual delivery</li>
+                        <li><i class="fas fa-check"></i> No password required</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="TikTok Followers" disabled>Enter Quantity to Purchase</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Packages Page -->
+    <section id="instagram" class="page">
+        <div class="page-header" style="background-color: var(--instagram-purple);">
+            <div class="container">
+                <h1>Instagram Packages</h1>
+                <p>Boost your Instagram profile with our engagement packages</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="packages-grid">
+                <div class="package-card" style="border-top-color: var(--instagram-purple);">
+                    <h3>Views</h3>
+                    <div class="package-price">KES 150 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Views:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.15" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> High-quality views</li>
+                        <li><i class="fas fa-check"></i> Real engagement</li>
+                        <li><i class="fas fa-check"></i> Fast delivery</li>
+                        <li><i class="fas fa-check"></i> Organic growth</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="Instagram Views" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--instagram-purple);">
+                    <h3>Likes</h3>
+                    <div class="package-price">KES 200 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Likes:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.2" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Real user likes</li>
+                        <li><i class="fas fa-check"></i> Organic growth</li>
+                        <li><i class="fas fa-check"></i> Safe for your account</li>
+                        <li><i class="fas fa-check"></i> Instant start</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="Instagram Likes" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--instagram-purple);">
+                    <h3>Followers</h3>
+                    <div class="package-price">KES 650 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Followers:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.65" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Active followers</li>
+                        <li><i class="fas fa-check"></i> Real accounts</li>
+                        <li><i class="fas fa-check"></i> Gradual delivery</li>
+                        <li><i class="fas fa-check"></i> No password required</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="Instagram Followers" disabled>Enter Quantity to Purchase</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facebook Packages Page -->
+    <section id="facebook" class="page">
+        <div class="page-header" style="background-color: var(--facebook-blue);">
+            <div class="container">
+                <h1>Facebook Packages</h1>
+                <p>Boost your Facebook presence with our engagement packages</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="packages-grid">
+                <div class="package-card" style="border-top-color: var(--facebook-blue);">
+                    <h3>Views</h3>
+                    <div class="package-price">KES 150 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Views:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.15" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> High-quality views</li>
+                        <li><i class="fas fa-check"></i> Real engagement</li>
+                        <li><i class="fas fa-check"></i> Fast delivery</li>
+                        <li><i class="fas fa-check"></i> Organic growth</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="Facebook Views" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--facebook-blue);">
+                    <h3>Likes</h3>
+                    <div class="package-price">KES 200 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Likes:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.2" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Real user likes</li>
+                        <li><i class="fas fa-check"></i> Organic growth</li>
+                        <li><i class="fas fa-check"></i> Safe for your account</li>
+                        <li><i class="fas fa-check"></i> Instant start</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="Facebook Likes" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--facebook-blue);">
+                    <h3>Followers</h3>
+                    <div class="package-price">KES 650 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Followers:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.65" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Active followers</li>
+                        <li><i class="fas fa-check"></i> Real accounts</li>
+                        <li><i class="fas fa-check"></i> Gradual delivery</li>
+                        <li><i class="fas fa-check"></i> No password required</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="Facebook Followers" disabled>Enter Quantity to Purchase</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- X (Twitter) Packages Page -->
+    <section id="twitter" class="page">
+        <div class="page-header" style="background-color: var(--twitter-blue);">
+            <div class="container">
+                <h1>X (Twitter) Packages</h1>
+                <p>Boost your X profile with our engagement packages</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="packages-grid">
+                <div class="package-card" style="border-top-color: var(--twitter-blue);">
+                    <h3>Followers</h3>
+                    <div class="package-price">KES 2000 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Followers:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="2" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Real active followers</li>
+                        <li><i class="fas fa-check"></i> Organic growth</li>
+                        <li><i class="fas fa-check"></i> Gradual delivery</li>
+                        <li><i class="fas fa-check"></i> No password required</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="X Followers" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--twitter-blue);">
+                    <h3>Retweets</h3>
+                    <div class="package-price">KES 600 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Retweets:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.6" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> High-quality retweets</li>
+                        <li><i class="fas fa-check"></i> Real engagement</li>
+                        <li><i class="fas fa-check"></i> Fast delivery</li>
+                        <li><i class="fas fa-check"></i> Organic reach</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="X Retweets" disabled>Enter Quantity to Purchase</button>
+                </div>
+                <div class="package-card" style="border-top-color: var(--twitter-blue);">
+                    <h3>Likes</h3>
+                    <div class="package-price">KES 700 per 1000</div>
+                    
+                    <div class="calculator">
+                        <div class="calculator-input">
+                            <label>Number of Likes:</label>
+                            <input type="number" min="0" class="quantity-input" data-rate="0.7" placeholder="e.g., 1000">
+                        </div>
+                        <div class="calculator-result">
+                            <h4>Total Cost:</h4>
+                            <div class="total-price">KES <span class="calculated-price">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Real user likes</li>
+                        <li><i class="fas fa-check"></i> Organic growth</li>
+                        <li><i class="fas fa-check"></i> Safe for your account</li>
+                        <li><i class="fas fa-check"></i> Instant start</li>
+                    </ul>
+                    <button class="btn purchase-btn btn-disabled" data-service="X Likes" disabled>Enter Quantity to Purchase</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contact Us to Purchase</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <p>Please contact us through one of the following channels to purchase:</p>
+            <div class="calculator-result" style="margin: 15px 0;">
+                <h4>Order Summary</h4>
+                <div><strong>Service:</strong> <span id="selectedService"></span></div>
+                <div><strong>Quantity:</strong> <span id="selectedQuantity"></span></div>
+                <div class="total-price">Total: KES <span id="selectedPrice"></span></div>
+            </div>
+            <div class="contact-options">
+                <a href="#" class="contact-option whatsapp-option" id="whatsappOption">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>Message us directly on WhatsApp</p>
+                    </div>
+                </a>
+                <a href="#" class="contact-option email-option" id="emailOption">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>Send us an email with your request</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StormTel Services</h3>
+                    <p>Your trusted partner for social media growth. We help you boost your online presence with authentic engagement.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/254797739720" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/stormtel" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
+                        <a href="mailto:stormtelservices@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="services">Services</a></li>
+                        <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-page="youtube">YouTube</a></li>
+                        <li><a href="#" class="nav-link" data-page="tiktok">TikTok</a></li>
+                        <li><a href="#" class="nav-link" data-page="instagram">Instagram</a></li>
+                        <li><a href="#" class="nav-link" data-page="facebook">Facebook</a></li>
+                        <li><a href="#" class="nav-link" data-page="twitter">X (Twitter)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +254 797 739720</li>
+                        <li><i class="fas fa-envelope"></i> stormtelservices@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> StormTel Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navMenu = document.querySelector('nav ul');
+            
+            mobileMenu.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+            
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    navMenu.classList.remove('active');
+                    
+                    const targetPage = this.getAttribute('data-page');
+                    
+                    pages.forEach(page => {
+                        page.classList.remove('active');
+                    });
+                    
+                    document.getElementById(targetPage).classList.add('active');
+                    
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Calculator functionality
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+            
+            quantityInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    const quantity = parseInt(this.value) || 0;
+                    const rate = parseFloat(this.getAttribute('data-rate'));
+                    const calculatedPrice = this.closest('.calculator').querySelector('.calculated-price');
+                    const purchaseBtn = this.closest('.package-card').querySelector('.purchase-btn');
+                    const totalCost = Math.round(quantity * rate);
+                    
+                    calculatedPrice.textContent = totalCost.toLocaleString();
+                    
+                    // Enable/disable purchase button based on quantity
+                    if (quantity > 0) {
+                        purchaseBtn.classList.remove('btn-disabled');
+                        purchaseBtn.disabled = false;
+                        purchaseBtn.textContent = 'Purchase Package';
+                    } else {
+                        purchaseBtn.classList.add('btn-disabled');
+                        purchaseBtn.disabled = true;
+                        purchaseBtn.textContent = 'Enter Quantity to Purchase';
+                    }
+                });
+            });
+            
+            // Updated purchase button functionality
+            const purchaseButtons = document.querySelectorAll('.purchase-btn');
+            const contactModal = document.getElementById('contactModal');
+            const closeModal = document.querySelector('.close-modal');
+            const selectedService = document.getElementById('selectedService');
+            const selectedQuantity = document.getElementById('selectedQuantity');
+            const selectedPrice = document.getElementById('selectedPrice');
+            const whatsappOption = document.getElementById('whatsappOption');
+            const emailOption = document.getElementById('emailOption');
+            
+            purchaseButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.disabled) return;
+                    
+                    const service = this.getAttribute('data-service');
+                    const calculator = this.closest('.package-card').querySelector('.calculator');
+                    const quantityInput = calculator.querySelector('.quantity-input');
+                    const calculatedPrice = calculator.querySelector('.calculated-price');
+                    
+                    const quantity = parseInt(quantityInput.value) || 0;
+                    const totalCost = calculatedPrice.textContent;
+                    
+                    selectedService.textContent = service;
+                    selectedQuantity.textContent = quantity;
+                    selectedPrice.textContent = totalCost;
+                    
+                    const message = `Hello, I would like to purchase ${service}. Quantity: ${quantity} units. Total: KES ${totalCost}. I came from the StormTel Services website.`;
+                    const encodedMessage = encodeURIComponent(message);
+                    
+                    whatsappOption.href = `https://wa.me/254797739720?text=${encodedMessage}`;
+                    emailOption.href = `mailto:stormtelservices@gmail.com?subject=Purchase Request: ${service}&body=${encodedMessage}`;
+                    
+                    contactModal.classList.add('active');
+                });
+            });
+            
+            closeModal.addEventListener('click', function() {
+                contactModal.classList.remove('active');
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === contactModal) {
+                    contactModal.classList.remove('active');
+                }
+            });
+        });
+
+        // Update copyright year automatically
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Logo click to go home function
+        function goToHome() {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('home').classList.add('active');
+            window.scrollTo(0, 0);
+            
+            // Close mobile menu if open
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.remove('active');
+        }
+
+        // Make specific external links open in new tab
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all links that have href starting with http, https, tel, mailto
+            const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="https"], a[href^="tel"], a[href^="mailto"]');
+            
+            externalLinks.forEach(link => {
+                // Don't add to internal navigation links
+                if (!link.classList.contains('nav-link')) {
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+        });
+
+        // Copy button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const textToCopy = this.getAttribute('data-text');
+                    
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        // Show copied feedback
+                        const originalText = this.textContent;
+                        this.textContent = 'Copied!';
+                        this.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.classList.remove('copied');
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                        alert('Failed to copy to clipboard');
+                    });
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
