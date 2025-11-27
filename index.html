@@ -950,8 +950,8 @@
     <section id="home" class="page active">
         <div class="hero">
             <div class="container">
-                <h1>Boost Your Social Media Presence</h1>
-                <p>Get real views, likes, followers, and subscribers for YouTube, TikTok, Instagram, and Facebook at affordable prices.</p>
+                <h1>Amplify Your Digital Presence</h1>
+                <p>Comprehensive solutions for social media growth, music services, and creative technology needs.</p>
                 <a href="#" class="btn nav-link" data-page="services">Our Services</a>
             </div>
         </div>
@@ -2038,6 +2038,16 @@
             const navMenu = document.querySelector('nav ul');
             navMenu.classList.remove('active');
         }
+
+        // Force modal contact links to open in new tab
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.whatsapp-option') || e.target.closest('.email-option')) {
+                e.preventDefault();
+                const link = e.target.closest('a');
+                window.open(link.href, '_blank', 'noopener,noreferrer');
+            }
+        });        
+
     </script>
 </body>
 </html>
