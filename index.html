@@ -202,6 +202,10 @@
             color: var(--facebook-blue);
         }
 
+        .service-card.twitter .service-icon {
+            color: var(--twitter-blue);
+        }
+
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
@@ -274,7 +278,7 @@
         .payment-options {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 50px;
             flex-wrap: wrap;
         }
 
@@ -282,7 +286,7 @@
             background-color: var(--safaricom-light-green);
             border-radius: 10px;
             padding: 30px;
-            width: 300px;
+            width: 340px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border: 2px solid var(--safaricom-green);
@@ -302,30 +306,34 @@
             margin-bottom: 10px;
             word-break: keep-all;
             white-space: nowrap;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
         }
 
         footer {
             background-color: var(--persian-blue);
             color: var(--white);
-            padding: 40px 0 20px;
+            padding: 20px 0 10px;
         }
 
         .footer-content {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .footer-section {
             flex: 1;
             min-width: 250px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
 
         .footer-section h3 {
-            margin-bottom: 20px;
-            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-size: 1rem;
         }
 
         .footer-section ul {
@@ -333,24 +341,30 @@
         }
 
         .footer-section ul li {
-            margin-bottom: 10px;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
         }
 
         .footer-section ul li a:hover {
             color: var(--orange);
         }
 
+        .footer-section p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
         .social-links {
             display: flex;
-            gap: 15px;
+            gap: 10px;
         }
 
         .social-links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             transition: all 0.3s;
@@ -363,8 +377,8 @@
 
         .copyright {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+            font-size: 0.8rem;
         }
 
         .page {
@@ -559,12 +573,52 @@
             color: #D44638;
         }
 
-        .payment-card {
-            width: 340px;
+        /* Copy button styles */
+        .copy-btn {
+            background: var(--safaricom-green);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 2px 6px;
+            margin-left: 8px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .payment-options {
-            gap: 50px;
+        .copy-btn:hover {
+            background: #008f45;
+            transform: scale(1.05);
+        }
+
+        .copy-btn.copied {
+            background: var(--orange);
+        }
+
+        .service-list {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .service-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .service-list li i {
+            margin-right: 10px;
+            width: 20px;
+            color: var(--persian-blue);
+        }
+
+        .package-description {
+            font-style: italic;
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 992px) {
@@ -618,98 +672,174 @@
             .calculator-input input {
                 width: 100%;
             }
+
+            .payment-options {
+                gap: 30px;
+            }
+
+            .payment-card {
+                width: 100%;
+            }
         }
 
         @media (max-width: 576px) {
             .hero {
-                padding: 60px 0;
+                padding: 20px 0;
             }
 
             .services, .about, .contact, .payment {
-                padding: 60px 0;
+                padding: 20px 0;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 1.1rem;
+                margin-bottom: 6px;
+            }
+
+            .hero p {
+                font-size: 0.8rem;
+                margin-bottom: 10px;
             }
 
             .section-title {
-                font-size: 1.5rem;
+                font-size: 1rem;
+                margin-bottom: 12px;
             }
-        }
 
-        /* Make footer compact on desktop */
-        footer {
-            padding: 20px 0 10px;
-        }
+            .service-card, .package-card, .contact-card {
+                padding: 10px;
+            }
 
-        .footer-content {
-            margin-bottom: 20px;
-        }
+            .service-icon {
+                font-size: 1.3rem;
+                margin-bottom: 6px;
+            }
 
-        .footer-section {
-            margin-bottom: 15px;
-        }
+            .service-card h3, .package-card h3 {
+                font-size: 0.9rem;
+                margin-bottom: 6px;
+            }
 
-        .footer-section h3 {
-            font-size: 1rem;
-            margin-bottom: 12px;
-        }
+            .package-price {
+                font-size: 1rem;
+                margin: 10px 0;
+            }
 
-        .footer-section ul li {
-            margin-bottom: 6px;
-            font-size: 0.85rem;
-        }
+            .contact-icon {
+                font-size: 1.3rem;
+                margin-bottom: 6px;
+            }
 
-        .footer-section p {
-            font-size: 0.85rem;
-            line-height: 1.4;
-        }
+            .contact-card h3 {
+                font-size: 0.85rem;
+                margin-bottom: 6px;
+            }
 
-        .social-links {
-            gap: 10px;
-        }
+            .contact-card p {
+                font-size: 0.8rem;
+            }
 
-        .social-links a {
-            width: 35px;
-            height: 35px;
-        }
+            .payment-card {
+                padding: 10px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
 
-        .copyright {
-            padding-top: 15px;
-            font-size: 0.8rem;
-        }        
+            .payment-options {
+                gap: 10px;
+            }
 
-        /* Copy button styles */
-        .copy-btn {
-            background: var(--safaricom-green);
-            color: white;
-            border: none;
-            border-radius: 3px;
-            padding: 2px 6px;
-            margin-left: 8px;
-            font-size: 0.7rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+            .btn {
+                padding: 5px 10px;
+                font-size: 0.75rem;
+            }
 
-        .copy-btn:hover {
-            background: #008f45;
-            transform: scale(1.05);
-        }
+            .calculator {
+                padding: 8px;
+                margin: 8px 0;
+            }
 
-        .copy-btn.copied {
-            background: var(--orange);
-        }
+            .calculator-input {
+                margin-bottom: 5px;
+            }
 
-        .payment-details p {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-        }
+            .calculator-input label {
+                font-size: 0.8rem;
+                min-width: 80px;
+            }
 
-        @media (max-width: 576px) {
-            /* Ultra compact header */
+            .calculator-input input {
+                padding: 4px;
+                font-size: 0.75rem;
+                width: 90px;
+            }
+
+            .calculator-result {
+                padding: 6px;
+                margin-top: 6px;
+            }
+
+            .calculator-result h4 {
+                font-size: 0.8rem;
+                margin-bottom: 3px;
+            }
+
+            .total-price {
+                font-size: 0.9rem;
+            }
+
+            .modal-content {
+                padding: 10px;
+            }
+
+            .modal-header h2 {
+                font-size: 1rem;
+            }
+
+            .package-features li {
+                margin-bottom: 3px;
+                font-size: 0.75rem;
+            }
+
+            .package-features li i {
+                margin-right: 3px;
+                font-size: 0.7rem;
+            }
+
+            .about-content {
+                gap: 12px;
+            }
+
+            .about-text p {
+                margin-bottom: 6px;
+                font-size: 0.8rem;
+            }
+
+            body {
+                font-size: 0.85rem;
+            }
+
+            .payment-details p {
+                font-size: 0.8rem;
+                margin-bottom: 4px;
+            }
+
+            .payment-card p {
+                font-size: 0.75rem;
+            }
+
+            .page-header {
+                padding: 25px 0;
+            }
+
+            .page-header h1 {
+                font-size: 1.2rem;
+            }
+
+            .page-header p {
+                font-size: 0.8rem;
+            }
+
             header {
                 padding: 6px 0;
             }
@@ -727,221 +857,8 @@
                 margin-left: 15px;
                 font-size: 0.85rem;
             }
-            
-            /* Ultra compact hero */
-            .hero {
-                padding: 20px 0;
-            }
-            
-            .hero h1 {
-                font-size: 1.1rem;
-                margin-bottom: 6px;
-            }
-            
-            .hero p {
-                font-size: 0.8rem;
-                margin-bottom: 10px;
-            }
-            
-            /* Ultra compact sections */
-            .services, .about, .contact, .payment {
-                padding: 20px 0;
-            }
-            
-            .section-title {
-                font-size: 1rem;
-                margin-bottom: 12px;
-            }
-            
-            /* Ultra compact cards */
-            .service-card, .package-card, .contact-card {
-                padding: 10px;
-            }
-            
-            .service-icon {
-                font-size: 1.3rem;
-                margin-bottom: 6px;
-            }
-            
-            .service-card h3, .package-card h3 {
-                font-size: 0.9rem;
-                margin-bottom: 6px;
-            }
-            
-            .package-price {
-                font-size: 1rem;
-                margin: 10px 0;
-            }
-            
-            /* Ultra compact contact */
-            .contact-icon {
-                font-size: 1.3rem;
-                margin-bottom: 6px;
-            }
-            
-            .contact-card h3 {
-                font-size: 0.85rem;
-                margin-bottom: 6px;
-            }
-            
-            .contact-card p {
-                font-size: 0.8rem;
-            }
-            
-            /* Ultra compact payment */
-            .payment-card {
-                padding: 10px;
-                width: 100%;
-                margin-bottom: 10px;
-            }
-            
-            .payment-options {
-                gap: 10px;
-            }
-            
-            /* Ultra compact footer */
-            footer {
-                padding: 12px 0 6px;
-            }
-            
-            .footer-content {
-                margin-bottom: 12px;
-            }
-            
-            .footer-section {
-                margin-bottom: 10px;
-                min-width: 100%;
-            }
-            
-            .footer-section h3 {
-                font-size: 0.85rem;
-                margin-bottom: 6px;
-            }
-            
-            .footer-section ul li {
-                margin-bottom: 3px;
-                font-size: 0.75rem;
-            }
-            
-            .footer-section p {
-                font-size: 0.75rem;
-            }
-            
-            .social-links {
-                gap: 6px;
-            }
-            
-            .social-links a {
-                width: 28px;
-                height: 28px;
-                font-size: 0.75rem;
-            }
-            
-            .copyright {
-                padding-top: 10px;
-                font-size: 0.7rem;
-            }
-            
-            /* Ultra compact buttons */
-            .btn {
-                padding: 5px 10px;
-                font-size: 0.75rem;
-            }
-            
-            /* Ultra compact calculator */
-            .calculator {
-                padding: 8px;
-                margin: 8px 0;
-            }
-            
-            .calculator-input {
-                margin-bottom: 5px;
-            }
-            
-            .calculator-input label {
-                font-size: 0.8rem;
-                min-width: 80px;
-            }
-            
-            .calculator-input input {
-                padding: 4px;
-                font-size: 0.75rem;
-                width: 90px;
-            }
-            
-            .calculator-result {
-                padding: 6px;
-                margin-top: 6px;
-            }
-            
-            .calculator-result h4 {
-                font-size: 0.8rem;
-                margin-bottom: 3px;
-            }
-            
-            .total-price {
-                font-size: 0.9rem;
-            }
-            
-            /* Ultra compact modal */
-            .modal-content {
-                padding: 10px;
-            }
-            
-            .modal-header h2 {
-                font-size: 1rem;
-            }
-            
-            /* Ultra compact features */
-            .package-features li {
-                margin-bottom: 3px;
-                font-size: 0.75rem;
-            }
-            
-            .package-features li i {
-                margin-right: 3px;
-                font-size: 0.7rem;
-            }
-            
-            /* Ultra compact about */
-            .about-content {
-                gap: 12px;
-            }
-            
-            .about-text p {
-                margin-bottom: 6px;
-                font-size: 0.8rem;
-            }
-            
-            /* Reduce all text sizes */
-            body {
-                font-size: 0.85rem;
-            }
-            
-            /* Payment details smaller */
-            .payment-details p {
-                font-size: 0.8rem;
-                margin-bottom: 4px;
-            }
-            
-            .payment-card p {
-                font-size: 0.75rem;
-            }
-            
-            /* Page header smaller */
-            .page-header {
-                padding: 25px 0;
-            }
-            
-            .page-header h1 {
-                font-size: 1.2rem;
-            }
-            
-            .page-header p {
-                font-size: 0.8rem;
-            }
 
-            /* Make footer MICRO compact */
+            /* Mobile footer */
             footer {
                 padding: 4px 0 2px !important;
             }
@@ -956,6 +873,7 @@
             .footer-section {
                 margin-bottom: 0;
                 padding: 0 3px;
+                min-width: auto;
             }
             
             .footer-section h3 {
@@ -990,7 +908,6 @@
                 font-size: 0.55rem;
             }
             
-            /* Reduce the first section size */
             .footer-section:first-child {
                 grid-column: 1 / -1;
                 text-align: center;
@@ -1002,13 +919,10 @@
                 margin-bottom: 2px;
             }
             
-            /* Hide some footer content if still too big */
             .footer-section:nth-child(4) {
                 display: none;
             }
-
         }
-
     </style>
 </head>
 <body>
@@ -1039,54 +953,6 @@
                 <h1>Boost Your Social Media Presence</h1>
                 <p>Get real views, likes, followers, and subscribers for YouTube, TikTok, Instagram, and Facebook at affordable prices.</p>
                 <a href="#" class="btn nav-link" data-page="services">Our Services</a>
-            </div>
-        </div>
-
-        <div class="services">
-            <div class="container">
-                <h2 class="section-title">Services We Offer</h2>
-                <div class="services-grid">
-                    <div class="service-card youtube">
-                        <div class="service-icon">
-                            <i class="fab fa-youtube"></i>
-                        </div>
-                        <h3>YouTube</h3>
-                        <p>Increase your YouTube channel's visibility with our growth packages.</p>
-                        <a href="#" class="btn nav-link" data-page="youtube">See Packages</a>
-                    </div>
-                    <div class="service-card tiktok">
-                        <div class="service-icon">
-                            <i class="fab fa-tiktok"></i>
-                        </div>
-                        <h3>TikTok</h3>
-                        <p>Boost your TikTok profile with views, likes, and followers.</p>
-                        <a href="#" class="btn nav-link" data-page="tiktok">See Packages</a>
-                    </div>
-                    <div class="service-card instagram">
-                        <div class="service-icon">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <h3>Instagram</h3>
-                        <p>Grow your Instagram presence with our engagement packages.</p>
-                        <a href="#" class="btn nav-link" data-page="instagram">See Packages</a>
-                    </div>
-                    <div class="service-card facebook">
-                        <div class="service-icon">
-                            <i class="fab fa-facebook"></i>
-                        </div>
-                        <h3>Facebook</h3>
-                        <p>Expand your Facebook reach with our targeted growth solutions.</p>
-                        <a href="#" class="btn nav-link" data-page="facebook">See Packages</a>
-                    </div>
-                    <div class="service-card twitter">
-                        <div class="service-icon">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                        <h3>Twitter (X)</h3>
-                        <p>Boost your X (Twitter) profile with followers, likes, and retweets.</p>
-                        <a href="#" class="btn nav-link" data-page="twitter">See Packages</a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -1206,7 +1072,102 @@
         <div class="page-header">
             <div class="container">
                 <h1>Our Services</h1>
-                <p>Choose from our range of social media growth services</p>
+                <p>Choose from our range of professional services</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="services-grid">
+                <!-- Group 1: Social Media Growth -->
+                <div class="service-card" style="border-top-color: var(--orange);">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media Growth</h3>
+                    <ul class="service-list">
+                        <li><i class="fab fa-youtube"></i> YouTube</li>
+                        <li><i class="fab fa-tiktok"></i> TikTok</li>
+                        <li><i class="fab fa-instagram"></i> Instagram</li>
+                        <li><i class="fab fa-facebook"></i> Facebook</li>
+                        <li><i class="fab fa-twitter"></i> X (Twitter)</li>
+                    </ul>
+                    <a href="#" class="btn nav-link" data-page="social-media">View Packages</a>
+                </div>
+
+                <!-- Group 2: Music Services -->
+                <div class="service-card" style="border-top-color: var(--orange);">
+                    <div class="service-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Music Services</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-globe"></i> Music Distribution</li>
+                        <li><i class="fas fa-microphone"></i> Music Production - Audio</li>
+                        <li><i class="fas fa-video"></i> Music Production - Video</li>
+                        <li><i class="fas fa-guitar"></i> Instrumental Training</li>
+                    </ul>
+                    <a href="#" class="btn nav-link" data-page="music-services">View Packages</a>
+                </div>
+
+                <!-- Group 3: Creative & Tech Services -->
+                <div class="service-card" style="border-top-color: var(--orange);">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Creative & Tech Services</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-palette"></i> Logo Making</li>
+                        <li><i class="fas fa-laptop"></i> ICT Training</li>
+                        <li><i class="fas fa-code"></i> Website Creation</li>
+                    </ul>
+                    <a href="#" class="btn nav-link" data-page="creative-tech">View Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Learn more about StormTel Services</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>StormTel Services was founded with the mission to help content creators, businesses, and influencers grow their online presence authentically and effectively.</p>
+                    <p>We understand the challenges of building an audience on social media platforms, which is why we've developed services that deliver real engagement from real users.</p>
+                    <p>Our team is dedicated to providing excellent customer service and ensuring that our clients achieve their social media goals. We're constantly updating our strategies to adapt to platform changes and provide the best possible results.</p>
+                </div>
+                <div class="about-image">
+                    <h3>Reach Out to Us</h3>
+                    <div class="social-links" style="justify-content: center; margin: 20px 0;">
+                        <a href="tel:+254797739720" class="btn" style="background: var(--persian-blue); margin: 5px;">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                        <a href="https://wa.me/254797739720" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25D366; margin: 5px;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/stormtel" target="_blank" rel="noopener noreferrer" class="btn" style="background: #0088cc; margin: 5px;">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="mailto:stormtelservices@gmail.com" target="_blank" rel="noopener noreferrer" class="btn" style="background: #D44638; margin: 5px;">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--dark-gray);">We're here to help you grow!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Growth Packages Page -->
+    <section id="social-media" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Social Media Growth</h1>
+                <p>Choose your platform to view packages</p>
             </div>
         </div>
         <div class="container">
@@ -1247,46 +1208,9 @@
                     <div class="service-icon">
                         <i class="fab fa-twitter"></i>
                     </div>
-                    <h3>Twitter (X)</h3>
-                    <p>Boost your X (Twitter) profile with followers, likes, and retweets.</p>
+                    <h3>X (Twitter)</h3>
+                    <p>Boost your X profile with followers, likes, and retweets.</p>
                     <a href="#" class="btn nav-link" data-page="twitter">See Packages</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Page -->
-    <section id="about" class="page">
-        <div class="page-header">
-            <div class="container">
-                <h1>About Us</h1>
-                <p>Learn more about StormTel Services</p>
-            </div>
-        </div>
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <p>StormTel Services was founded with the mission to help content creators, businesses, and influencers grow their online presence authentically and effectively.</p>
-                    <p>We understand the challenges of building an audience on social media platforms, which is why we've developed services that deliver real engagement from real users.</p>
-                    <p>Our team is dedicated to providing excellent customer service and ensuring that our clients achieve their social media goals. We're constantly updating our strategies to adapt to platform changes and provide the best possible results.</p>
-                </div>
-                <div class="about-image">
-                    <h3>Reach Out to Us</h3>
-                    <div class="social-links" style="justify-content: center; margin: 20px 0;">
-                        <a href="tel:+254797739720" class="btn" style="background: var(--persian-blue); margin: 5px;">
-                            <i class="fas fa-phone-alt"></i>
-                        </a>
-                        <a href="https://wa.me/254797739720" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25D366; margin: 5px;">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://t.me/stormtel" target="_blank" rel="noopener noreferrer" class="btn" style="background: #0088cc; margin: 5px;">
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                        <a href="mailto:stormtelservices@gmail.com" target="_blank" rel="noopener noreferrer" class="btn" style="background: #D44638; margin: 5px;">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                    <p style="font-size: 0.9rem; color: var(--dark-gray);">We're here to help you grow!</p>
                 </div>
             </div>
         </div>
@@ -1730,6 +1654,123 @@
         </div>
     </section>
 
+    <!-- Music Services Packages Page -->
+    <section id="music-services" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Music Services</h1>
+                <p>Professional music services for artists and creators</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="packages-grid">
+                <div class="package-card" style="border-top-color: var(--orange);">
+                    <h3>Music Distribution</h3>
+                    <div class="package-price">KES 3,000</div>
+                    <p class="package-description">Worldwide distribution to all major platforms (one-time payment)</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Worldwide distribution</li>
+                        <li><i class="fas fa-check"></i> All major platforms</li>
+                        <li><i class="fas fa-check"></i> One-time payment</li>
+                        <li><i class="fas fa-check"></i> Professional setup</li>
+                    </ul>
+                    <button class="btn purchase-service-btn" data-service="Music Distribution" data-price="KES 3,000">Inquire Service</button>
+                </div>
+                
+                <div class="package-card" style="border-top-color: var(--orange);">
+                    <h3>Music Production - Audio</h3>
+                    <div class="package-price">KES 4,000</div>
+                    <p class="package-description">Professional audio production and mixing</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Professional recording</li>
+                        <li><i class="fas fa-check"></i> Audio mixing</li>
+                        <li><i class="fas fa-check"></i> Mastering</li>
+                        <li><i class="fas fa-check"></i> High quality output</li>
+                    </ul>
+                    <button class="btn purchase-service-btn" data-service="Music Production - Audio" data-price="KES 4,000">Inquire Service</button>
+                </div>
+                
+                <div class="package-card" style="border-top-color: var(--orange);">
+                    <h3>Music Production - Video</h3>
+                    <div class="package-price">KES 10,000</div>
+                    <p class="package-description">Professional music video production</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Professional filming</li>
+                        <li><i class="fas fa-check"></i> Video editing</li>
+                        <li><i class="fas fa-check"></i> Color grading</li>
+                        <li><i class="fas fa-check"></i> High quality output</li>
+                    </ul>
+                    <button class="btn purchase-service-btn" data-service="Music Production - Video" data-price="KES 10,000">Inquire Service</button>
+                </div>
+                
+                <div class="package-card" style="border-top-color: var(--orange);">
+                    <h3>Instrumental Training</h3>
+                    <div class="package-price">KES 15,000</div>
+                    <p class="package-description">Keyboard & Guitar training course</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Keyboard lessons</li>
+                        <li><i class="fas fa-check"></i> Guitar lessons</li>
+                        <li><i class="fas fa-check"></i> Professional instructor</li>
+                        <li><i class="fas fa-check"></i> Comprehensive course</li>
+                    </ul>
+                    <button class="btn purchase-service-btn" data-service="Instrumental Training (Keyboard & Guitar)" data-price="KES 15,000">Inquire Service</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative & Tech Services Page -->
+    <section id="creative-tech" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Creative & Tech Services</h1>
+                <p>Professional creative and technology solutions</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="packages-grid">
+                <div class="package-card" style="border-top-color: var(--orange);">
+                    <h3>Logo Making</h3>
+                    <div class="package-price">KES 1,500</div>
+                    <p class="package-description">Professional logo design for your brand</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Professional design</li>
+                        <li><i class="fas fa-check"></i> Multiple concepts</li>
+                        <li><i class="fas fa-check"></i> High resolution files</li>
+                        <li><i class="fas fa-check"></i> Source files included</li>
+                    </ul>
+                    <button class="btn purchase-service-btn" data-service="Logo Making" data-price="KES 1,500">Inquire Service</button>
+                </div>
+                
+                <div class="package-card" style="border-top-color: var(--orange);">
+                    <h3>ICT Training</h3>
+                    <div class="package-price">KES 10,000</div>
+                    <p class="package-description">Comprehensive ICT training course</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Full course package</li>
+                        <li><i class="fas fa-check"></i> Professional instructor</li>
+                        <li><i class="fas fa-check"></i> Hands-on training</li>
+                        <li><i class="fas fa-check"></i> Certificate included</li>
+                    </ul>
+                    <button class="btn purchase-service-btn" data-service="ICT Training" data-price="KES 10,000">Inquire Service</button>
+                </div>
+                
+                <div class="package-card" style="border-top-color: var(--orange);">
+                    <h3>Website Creation</h3>
+                    <div class="package-price">Contact for Quote</div>
+                    <p class="package-description">Custom website development and design</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Responsive design</li>
+                        <li><i class="fas fa-check"></i> Modern UI/UX</li>
+                        <li><i class="fas fa-check"></i> Fast loading</li>
+                        <li><i class="fas fa-check"></i> SEO optimized</li>
+                    </ul>
+                    <button class="btn purchase-service-btn" data-service="Website Creation" data-price="Contact for Quote">Inquire Service</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Modal -->
     <div class="modal" id="contactModal">
         <div class="modal-content">
@@ -1737,12 +1778,17 @@
                 <h2>Contact Us to Purchase</h2>
                 <button class="close-modal">&times;</button>
             </div>
-            <p>Please contact us through one of the following channels to purchase:</p>
-            <div class="calculator-result" style="margin: 15px 0;">
+            <p>Please contact us through one of the following channels:</p>
+            <div class="calculator-result" style="margin: 15px 0; display: none;" id="orderSummary">
                 <h4>Order Summary</h4>
                 <div><strong>Service:</strong> <span id="selectedService"></span></div>
                 <div><strong>Quantity:</strong> <span id="selectedQuantity"></span></div>
                 <div class="total-price">Total: KES <span id="selectedPrice"></span></div>
+            </div>
+            <div class="calculator-result" style="margin: 15px 0; display: none;" id="serviceSummary">
+                <h4>Service Inquiry</h4>
+                <div><strong>Service:</strong> <span id="selectedService2"></span></div>
+                <div><strong>Price:</strong> <span id="selectedPrice2"></span></div>
             </div>
             <div class="contact-options">
                 <a href="#" class="contact-option whatsapp-option" id="whatsappOption">
@@ -1787,11 +1833,9 @@
                 <div class="footer-section">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#" class="nav-link" data-page="youtube">YouTube</a></li>
-                        <li><a href="#" class="nav-link" data-page="tiktok">TikTok</a></li>
-                        <li><a href="#" class="nav-link" data-page="instagram">Instagram</a></li>
-                        <li><a href="#" class="nav-link" data-page="facebook">Facebook</a></li>
-                        <li><a href="#" class="nav-link" data-page="twitter">X (Twitter)</a></li>
+                        <li><a href="#" class="nav-link" data-page="social-media">Social Media</a></li>
+                        <li><a href="#" class="nav-link" data-page="music-services">Music Services</a></li>
+                        <li><a href="#" class="nav-link" data-page="creative-tech">Creative & Tech</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -1864,13 +1908,15 @@
                 });
             });
             
-            // Updated purchase button functionality
+            // Social media purchase buttons
             const purchaseButtons = document.querySelectorAll('.purchase-btn');
             const contactModal = document.getElementById('contactModal');
             const closeModal = document.querySelector('.close-modal');
             const selectedService = document.getElementById('selectedService');
             const selectedQuantity = document.getElementById('selectedQuantity');
             const selectedPrice = document.getElementById('selectedPrice');
+            const selectedService2 = document.getElementById('selectedService2');
+            const selectedPrice2 = document.getElementById('selectedPrice2');
             const whatsappOption = document.getElementById('whatsappOption');
             const emailOption = document.getElementById('emailOption');
             
@@ -1886,6 +1932,10 @@
                     const quantity = parseInt(quantityInput.value) || 0;
                     const totalCost = calculatedPrice.textContent;
                     
+                    // Show order summary (social media)
+                    document.getElementById('orderSummary').style.display = 'block';
+                    document.getElementById('serviceSummary').style.display = 'none';
+                    
                     selectedService.textContent = service;
                     selectedQuantity.textContent = quantity;
                     selectedPrice.textContent = totalCost;
@@ -1899,7 +1949,33 @@
                     contactModal.classList.add('active');
                 });
             });
-            
+
+            // Music and Creative services contact modal
+            const serviceButtons = document.querySelectorAll('.purchase-service-btn');
+
+            serviceButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const service = this.getAttribute('data-service');
+                    const price = this.getAttribute('data-price');
+                    
+                    // Show service summary (music/creative)
+                    document.getElementById('orderSummary').style.display = 'none';
+                    document.getElementById('serviceSummary').style.display = 'block';
+                    
+                    selectedService2.textContent = service;
+                    selectedPrice2.textContent = price;
+                    
+                    const message = `Hello, I would like to inquire about ${service} for ${price}. I came from the StormTel Services website.`;
+                    const encodedMessage = encodeURIComponent(message);
+                    
+                    whatsappOption.href = `https://wa.me/254797739720?text=${encodedMessage}`;
+                    emailOption.href = `mailto:stormtelservices@gmail.com?subject=Service Inquiry: ${service}&body=${encodedMessage}`;
+                    
+                    contactModal.classList.add('active');
+                });
+            });
+
+            // Close modal
             closeModal.addEventListener('click', function() {
                 contactModal.classList.remove('active');
             });
@@ -1909,41 +1985,11 @@
                     contactModal.classList.remove('active');
                 }
             });
-        });
 
-        // Update copyright year automatically
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+            // Update copyright year automatically
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Logo click to go home function
-        function goToHome() {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
-            document.getElementById('home').classList.add('active');
-            window.scrollTo(0, 0);
-            
-            // Close mobile menu if open
-            const navMenu = document.querySelector('nav ul');
-            navMenu.classList.remove('active');
-        }
-
-        // Make specific external links open in new tab
-        document.addEventListener('DOMContentLoaded', function() {
-            // Select all links that have href starting with http, https, tel, mailto
-            const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="https"], a[href^="tel"], a[href^="mailto"]');
-            
-            externalLinks.forEach(link => {
-                // Don't add to internal navigation links
-                if (!link.classList.contains('nav-link')) {
-                    link.setAttribute('target', '_blank');
-                    link.setAttribute('rel', 'noopener noreferrer');
-                }
-            });
-        });
-
-        // Copy button functionality
-        document.addEventListener('DOMContentLoaded', function() {
+            // Copy button functionality
             const copyButtons = document.querySelectorAll('.copy-btn');
             
             copyButtons.forEach(button => {
@@ -1966,8 +2012,32 @@
                     });
                 });
             });
+
+            // Make specific external links open in new tab
+            const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="https"], a[href^="tel"], a[href^="mailto"]');
+            
+            externalLinks.forEach(link => {
+                // Don't add to internal navigation links
+                if (!link.classList.contains('nav-link')) {
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
         });
 
+        // Logo click to go home function
+        function goToHome() {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('home').classList.add('active');
+            window.scrollTo(0, 0);
+            
+            // Close mobile menu if open
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.remove('active');
+        }
     </script>
 </body>
 </html>
