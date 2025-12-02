@@ -1903,15 +1903,31 @@
                     
                     const targetPage = this.getAttribute('data-page');
                     
+                    // Update browser history for back button
+                    history.pushState({page: targetPage}, '', `#${targetPage}`);
+                    
+                    // Save to localStorage
+                    localStorage.setItem('currentPage', targetPage);
+                    
                     pages.forEach(page => {
                         page.classList.remove('active');
                     });
                     
-                    localStorage.setItem('currentPage', targetPage);
                     document.getElementById(targetPage).classList.add('active');
                     
                     window.scrollTo(0, 0);
                 });
+            });
+            
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', function(event) {
+                if (event.state && event.state.page) {
+                    const targetPage = event.state.page;
+                    pages.forEach(page => page.classList.remove('active'));
+                    document.getElementById(targetPage).classList.add('active');
+                    localStorage.setItem('currentPage', targetPage);
+                    window.scrollTo(0, 0);
+                }
             });
             
             // Reset all calculator inputs on page reload
