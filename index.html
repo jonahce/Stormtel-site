@@ -1878,11 +1878,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Remember page on reload
-            const savedPage = localStorage.getItem('currentPage');
+            // Check URL hash first, then localStorage
+            const hash = window.location.hash.substring(1);
+            let savedPage = hash || localStorage.getItem('currentPage');
+
             if (savedPage && document.getElementById(savedPage)) {
                 document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
                 document.getElementById(savedPage).classList.add('active');
+                // Update history
+                history.replaceState({page: savedPage}, '', `#${savedPage}`);
+            } else {
+                // Default to home
+                document.getElementById('home').classList.add('active');
+                history.replaceState({page: 'home'}, '', '#home');
             }
 
             const mobileMenu = document.querySelector('.mobile-menu');
@@ -1918,7 +1926,7 @@
                     window.scrollTo(0, 0);
                 });
             });
-            
+
             // Handle browser back/forward buttons
             window.addEventListener('popstate', function(event) {
                 if (event.state && event.state.page) {
@@ -2102,6 +2110,10 @@
             });
             document.getElementById('home').classList.add('active');
             window.scrollTo(0, 0);
+            
+            // Clear saved page and update history
+            localStorage.removeItem('currentPage');
+            history.pushState({page: 'home'}, '', '#home');
             
             // Close mobile menu if open
             const navMenu = document.querySelector('nav ul');
