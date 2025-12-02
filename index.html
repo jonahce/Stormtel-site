@@ -923,6 +923,14 @@
                 display: none;
             }
         }
+
+        .minimum-notice {
+            font-size: 0.8rem;
+            color: var(--orange);
+            margin-top: 5px;
+            font-style: italic;
+        }
+
     </style>
 </head>
 <body>
@@ -1228,13 +1236,14 @@
             <div class="packages-grid">
                 <div class="package-card" style="border-top-color: var(--youtube-red);">
                     <h3>Views</h3>
-                    <div class="package-price">KES 250 per 1000</div>
+                    <div class="package-price">KES 350 per 1000</div>
                     
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Views:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.25" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.35" placeholder="Min: 100">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Views</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1258,6 +1267,7 @@
                             <label>Number of Likes:</label>
                             <input type="number" min="0" class="quantity-input" data-rate="0.3" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Likes</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1274,13 +1284,14 @@
                 </div>
                 <div class="package-card" style="border-top-color: var(--youtube-red);">
                     <h3>Subscribers</h3>
-                    <div class="package-price">KES 450 per 100</div>
+                    <div class="package-price">KES 700 per 100</div>
                     
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Subs:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="4.5" placeholder="e.g., 100">
+                            <input type="number" min="100" class="quantity-input" data-rate="7" placeholder="Min: 100">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Subs</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1302,8 +1313,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Watch Hours:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="3" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="3" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Hours</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1339,8 +1351,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Views:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.15" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.15" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Views</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1362,8 +1375,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Likes:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.2" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.2" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Likes</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1385,8 +1399,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Followers:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.65" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.65" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Followers</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1422,8 +1437,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Views:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.15" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.15" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Views</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1445,8 +1461,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Likes:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.2" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.2" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Likes</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1468,8 +1485,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Followers:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.65" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.65" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Followers</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1505,8 +1523,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Views:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.15" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.15" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Views</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1528,8 +1547,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Likes:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.2" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.2" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Likes</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1551,8 +1571,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Followers:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.65" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.65" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Followers</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1588,8 +1609,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Followers:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="2" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="2" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Followers</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1611,8 +1633,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Retweets:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.6" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.6" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Retweets</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1634,8 +1657,9 @@
                     <div class="calculator">
                         <div class="calculator-input">
                             <label>Number of Likes:</label>
-                            <input type="number" min="0" class="quantity-input" data-rate="0.7" placeholder="e.g., 1000">
+                            <input type="number" min="100" class="quantity-input" data-rate="0.7" placeholder="e.g., 1000">
                         </div>
+                        <div class="minimum-notice">Minimum order: 100 Likes</div>
                         <div class="calculator-result">
                             <h4>Total Cost:</h4>
                             <div class="total-price">KES <span class="calculated-price">0</span></div>
@@ -1854,6 +1878,13 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Remember page on reload
+            const savedPage = localStorage.getItem('currentPage');
+            if (savedPage && document.getElementById(savedPage)) {
+                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                document.getElementById(savedPage).classList.add('active');
+            }
+
             const mobileMenu = document.querySelector('.mobile-menu');
             const navMenu = document.querySelector('nav ul');
             
@@ -1876,12 +1907,30 @@
                         page.classList.remove('active');
                     });
                     
+                    localStorage.setItem('currentPage', targetPage);
                     document.getElementById(targetPage).classList.add('active');
                     
                     window.scrollTo(0, 0);
                 });
             });
             
+            // Reset all calculator inputs on page reload
+            document.querySelectorAll('.quantity-input').forEach(input => {
+                input.value = '';
+            });
+            
+            // Reset all calculated prices
+            document.querySelectorAll('.calculated-price').forEach(span => {
+                span.textContent = '0';
+            });
+            
+            // Reset all purchase buttons
+            document.querySelectorAll('.purchase-btn').forEach(button => {
+                button.classList.add('btn-disabled');
+                button.disabled = true;
+                button.textContent = 'Enter Quantity to Purchase';
+            });
+
             // Calculator functionality
             const quantityInputs = document.querySelectorAll('.quantity-input');
             
@@ -1896,10 +1945,14 @@
                     calculatedPrice.textContent = totalCost.toLocaleString();
                     
                     // Enable/disable purchase button based on quantity
-                    if (quantity > 0) {
+                    if (quantity >= 100) {
                         purchaseBtn.classList.remove('btn-disabled');
                         purchaseBtn.disabled = false;
                         purchaseBtn.textContent = 'Purchase Package';
+                    } else if (quantity > 0 && quantity < 100) {
+                        purchaseBtn.classList.add('btn-disabled');
+                        purchaseBtn.disabled = true;
+                        purchaseBtn.textContent = 'Minimum 100 units required';
                     } else {
                         purchaseBtn.classList.add('btn-disabled');
                         purchaseBtn.disabled = true;
